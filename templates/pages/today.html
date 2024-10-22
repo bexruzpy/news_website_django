@@ -1,0 +1,57 @@
+{% extends 'index.html' %}
+
+{% block title %}Bugungi yangiliklar{% endblock %}
+
+{% block content %}
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'css/today.css' %}">
+<div class="blogs" id="mobile_post_content">
+    {% if asosiy_news %}
+        <h1>{{ asosiy_news.title }}</h1>
+        <p>{{ asosiy_news.content|linebreaks }}</p>
+    {% else %}
+        <br />
+        <br />
+        <h1>Bugun hech qanday yangiliklar mavjud emas</h1>
+        <br />
+        <br />
+    {% endif %}
+</div>
+<div id="home_page_content">
+    <div class="blogs">
+        
+        {% for news in news_1 %}
+            <div class="yangilik_linki">
+                <a href="?news={{ news.id }}"><h2>{{ news.title }}</h2>
+                <p>{{ news.content | truncatechars:50 }}</p></a>
+            </div>
+        {% endfor %}
+            
+    </div>
+    <div class="blogs" id="pc_post_content">
+        {% if asosiy_news %}
+            <h1>{{ asosiy_news.title }}</h1>
+            <p>{{ asosiy_news.content|linebreaks }}</p>
+        {% else %}
+            <br />
+            <br />
+            <h1>Bugun hech qanday yangiliklar mavjud emas</h1>
+            <br />
+            <br />
+        {% endif %}
+    </div>
+    <div class="blogs">
+        {% for news in news_2 %}
+            <div class="yangilik_linki">
+                <a href="?news={{ news.id }}"><h2>{{ news.title }}</h2>
+                <p>{{ news.content | truncatechars:50 }}</p></a>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+
+
+{% endblock %}

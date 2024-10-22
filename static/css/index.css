@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    padding: 0;
+}
+body {
+    padding-top: 20px;
+    background-image: url("../images/background-image.jpg");
+    background-size: cover;  /* Tasvir sahifani to‘liq qoplash uchun */
+    background-position: center;  /* Tasvirni markaziy o'rnatish */
+    background-repeat: no-repeat;  /* Tasvir takrorlanmasligi uchun */
+    background-attachment: fixed;  /* Tasvirni ekranga "tutib" qo‘yish */
+    font-family: 'Poppins', sans-serif;
+    backdrop-filter: blur(3px);
+    margin: 0;
+}
+header {
+    display: flex;
+    width: 100% -40px;
+    margin: 20px 30px;
+    backdrop-filter: blur(20px);
+    overflow: auto;
+    padding: 0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgb(255,200,0,0.6);
+    background-color: rgb(205,200,200,0.6);
+}
+header a {
+    display: inline-block;
+    padding: 20px;
+    margin: 0;
+    text-decoration: none;
+    color: black;
+    transition: 0.3s;
+}
+
+header a:hover {
+    color: rgb(255,10,0,0.6);
+}
+header a:first-child {
+    background-color: rgb(255,10,0,0.6);
+    color: aliceblue;
+}
+header a:first-child:hover {
+    color: aqua;
+}
+
+
+
+@media (max-width: 500px) {
+    
+    header {
+        display: flex;
+        padding: 0;
+    }
+}

@@ -1,0 +1,86 @@
+.blogs h1{
+    text-align: center;
+}
+.blogs {
+    width: 50%;
+    padding: 10px;
+}
+
+
+
+.blogs:first-child {
+    width: 25%;
+}
+
+.blogs:first-child a {
+    text-decoration: none;
+    color: rgb(0,0,0,0.8);
+    transition: 0.3s;
+}
+.blogs:first-child a:hover {
+    text-decoration: underline;
+    color: blueviolet;
+}
+
+
+.blogs:last-child {
+    width: 25%;
+}
+
+
+.blogs:last-child a {
+    text-decoration: none;
+    color: rgb(0,0,0,0.8);
+    transition: 0.3s;
+}
+.blogs:last-child a:hover {
+    text-decoration: underline;
+    color: blueviolet;
+}
+
+
+
+#home_page_content {
+    display: flex;
+}
+
+
+.yangilik_linki {
+    padding: 20px;
+    margin: 10px;
+    border: 1px solid rgb(0,0,0,0.8);
+    background-color: rgb(245,250,255,0.5);
+}
+
+
+#mobile_post_content {
+    display: none;
+}
+
+@media (max-width: 900px) {
+    
+    #home_page_content {
+        display: block;
+    }
+
+    .blogs {
+        width: 100%;
+        position: relative;
+    }
+    .blogs:first-child {
+        width: 100%;
+        position: relative;
+        padding-bottom: 0;
+    }
+    .blogs:last-child {
+        width: 100%;
+        position: relative;
+        padding-top: 0;
+    }
+    #pc_post_content {
+        display: none;
+    }
+    #mobile_post_content {
+        display: block;
+    }
+}

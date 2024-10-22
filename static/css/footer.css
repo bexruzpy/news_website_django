@@ -1,0 +1,215 @@
+footer {
+    position: relative;
+    background-color: #333;  /* Fon rangini o'rnatish */
+    color: white;  /* Matn rangini o'rnatish */
+    padding: 20px 0;  /* Yuqoridan va pastdan bo'shliq berish */
+    text-align: center;  /* Matnni markazga joylashtirish */
+    overflow: hidden;
+}
+
+footer .container {
+    max-width: 1200px;  /* Maksimal kenglik */
+    margin: 0 auto;  /* Markazlash uchun */
+    padding: 0 15px;  /* Chap va o'ngdan bo'shliq berish */
+}
+
+footer ul {
+    list-style: none;  /* Ro'yxat belgilari olib tashlanadi */
+    padding: 0;  /* Bo'shliqni olib tashlash */
+}
+
+footer ul li {
+    display: inline;  /* Ro'yxat elementlarini bir qatorga joylashtirish */
+    margin: 0 15px;  /* O'ng va chapdan bo'shliq berish */
+}
+
+footer a {
+    display: inline;
+    float: left;
+    color: rgb(255,255,255,0.7);  /* Havola rangini o'rnatish */
+    text-decoration: none;  /* Ostki chiziq olib tashlanadi */
+    margin: 0 20px;
+}
+
+footer a:hover {
+    text-decoration: underline;  /* Havola ustiga kelsa ostki chiziq beriladi */
+}
+
+footer #creater_div div {
+    justify-content: center;
+    width: 70%;
+}
+footer #creater_div div a{
+    transition: 0.5s;   
+    display: block;
+    padding: 10px;
+    width: 100%;
+    margin: auto;
+}
+footer #creater_div a:hover{
+    color: cyan;
+    transform: scale(1.5);
+}
+
+footer #creater_div img {
+    margin: 0 auto;
+}
+
+#creater_div {
+    display: flex;
+}
+
+#footer_1_item {
+    top: 10px;
+    position: absolute;
+    height: 200px;
+    width: 100px;
+    left: -50px;
+    background-color: cyan;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px rgb(255,255,255,0.4);
+    transform: rotateZ(45deg);
+}
+
+#footer_2_item {
+    bottom: 10px;
+    position: absolute;
+    height: 200px;
+    width: 100px;
+    right: -50px;
+    background-color: cyan;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px rgb(255,255,255,0.4);
+    transform: rotateZ(45deg);
+}
+
+#footer_3_item {
+    top: 10px;
+    position: absolute;
+    height: 500px;
+    width: 100px;
+    left: -50%;
+    background-color: cyan;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px rgb(255,255,255,0.4);
+    transform: rotateZ(-45deg);
+}
+#footer_4_item {
+    cursor: pointer;
+    transition: 0.5s;
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    left: 0;
+    bottom: 0;
+    background-color: cyan;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px rgb(255,255,255,0.4);
+    transform: rotateZ(15deg) translate(-30%,18%);
+}
+#footer_5_item {
+    cursor: pointer;
+    transition: 0.5s;
+    position: absolute;
+    height: 90px;
+    width: 90px;
+    left: 50%;
+    bottom: 0;
+    background-color: cyan;
+    border-radius: 20px;
+    box-shadow: 2px 5px 10px rgb(255,255,255,0.4);
+    transform: translate(-50%, 20%);
+
+}
+#footer_6_item {
+    cursor: pointer;
+    transition: 0.5s;
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    right: -3%;
+    bottom: 5%;
+    background-color: cyan;
+    border-radius: 20px;
+    box-shadow: -5px 5px 10px rgb(255,255,255,0.4);
+    transform: rotateZ(-30deg);
+
+}
+#footer_7_item {
+    cursor: pointer;
+    transition: 0.5s;
+    position: absolute;
+    height: 70px;
+    width: 70px;
+    right: -25%;
+    bottom: 26%;
+    background-color: cyan;
+    border-radius: 20px;
+    box-shadow: -5px 5px 10px rgb(255,255,255,0.4);
+    transform: rotateZ(-60deg);
+
+}
+#footer_4_item:hover {
+    transition: 0.3s;
+    transform: rotateZ(15deg) translate(-30%,18%) scale(1.1);
+}
+#footer_5_item:hover {
+    transition: 0.3s;
+    transform: translate(-50%, 20%) scale(1.1);
+}
+#footer_6_item:hover {
+    transition: 0.3s;
+    transform: rotateZ(-30deg) scale(1.1);
+}
+#footer_7_item:hover {
+    transition: 0.3s;
+    transform: rotateZ(-60deg) scale(1.1);
+}
+
+
+
+@keyframes footer_anim {
+    0% {
+        transform: translateY(0px) rotateZ(45deg);
+    }
+    60% {
+        transform: translateY(10px) rotateZ(45deg);
+    }
+    100% {
+        transform: translateY(0px) rotateZ(45deg);
+    }
+}
+.anim_elements {
+    animation: footer_anim 4s infinite alternate;
+}
+#person_image {
+    width: 250px;
+    height: 330px;
+    border-radius: 50%;
+    box-shadow: 0 10px 20px cyan;
+    background-image: linear-gradient(160deg, rgba(0, 0, 0, 0) , cyan);
+}
+
+@media (max-width: 500px) {
+    
+    footer #creater_div div {
+        justify-content: center;
+        width: 50%;
+    }
+    #person_image {
+        width: 170px;
+        height: 240px;
+    }
+    #footer_1_item {
+        background-color: rgb(0,255,255,0.6);
+    }
+    #footer_2_item {
+        background-color: rgb(0,255,255,0.6);
+    }
+
+    footer ul li {
+        display: block;  /* Ro'yxat elementlarini bir qatorga joylashtirish */
+        margin: 0 5px;  /* O'ng va chapdan bo'shliq berish */
+    }
+    
+}
