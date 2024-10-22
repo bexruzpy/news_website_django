@@ -1,5 +1,4 @@
-# news_website_django
-Yangiliklar sayti
+# Yangiliklar sayti
 
-# Sayt havolasi
+Sayt havolasi
 http://news.projectsplatform.uz/
